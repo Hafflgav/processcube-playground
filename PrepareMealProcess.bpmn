@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="g08eccd43-9d24-466d-aeb8-f488bdf7eba3_Definition" targetNamespace="http://bpmn.io/schema/bpmn" exporter="5Minds Studio" exporterVersion="1">
   <bpmn:collaboration id="Collaboration_1cidyxu" name="">
-    <bpmn:participant id="Participant_0px403d" name="Prepare Meal Process" processRef="ge06560cc-9661-48be-a26c-a6cd2e61a18a_Process" />
+    <bpmn:participant id="Participant_0px403d" name="Prepare Meal Process" processRef="prepareMealProces" />
   </bpmn:collaboration>
-  <bpmn:process id="ge06560cc-9661-48be-a26c-a6cd2e61a18a_Process" name="Prepare Meal Process" isExecutable="true">
+  <bpmn:process id="prepareMealProces" name="Prepare Meal Process" isExecutable="true">
     <bpmn:laneSet>
       <bpmn:lane id="Lane_1xzf0d3">
         <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
