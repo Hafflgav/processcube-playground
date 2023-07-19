@@ -29,11 +29,6 @@
     <bpmn:dataObjectReference id="purchaseOrderDocument" name="Purchase Order" dataObjectRef="DataObject_0jjrj4x" />
     <bpmn:dataObject id="DataObject_0jjrj4x" />
     <bpmn:serviceTask id="Activity_0y0ests" name="Analyse Purchase Order" camunda:type="external" camunda:topic="analysePO">
-      <bpmn:extensionElements>
-        <camunda:properties>
-          <camunda:property name="payload" value="dataObjects.purchaseOrderDocument" />
-        </camunda:properties>
-      </bpmn:extensionElements>
       <bpmn:incoming>Flow_1erz7x3</bpmn:incoming>
       <bpmn:outgoing>Flow_1w3oxfl</bpmn:outgoing>
       <bpmn:property id="Property_19g0t77" name="__targetRef_placeholder" />
@@ -44,6 +39,11 @@
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_1w3oxfl" sourceRef="Activity_0y0ests" targetRef="Event_1bzhoo4" />
     <bpmn:intermediateThrowEvent id="Event_1bzhoo4" name="Send pick list to WMS">
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="inputValues" value="dataObjects.purchaseOrderDocument; &#10;processInstanceMetadata" />
+        </camunda:properties>
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_1w3oxfl</bpmn:incoming>
       <bpmn:outgoing>Flow_095c8x6</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_1qh7ceh" messageRef="Message_oBwrZIK3" />
@@ -87,12 +87,12 @@
         <dc:Bounds x="-50" y="4" width="940" height="346" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_1r0jzfb_di" bpmnElement="Lane_1r0jzfb" isHorizontal="true">
-        <dc:Bounds x="-20" y="4" width="910" height="236" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1brmlwn_di" bpmnElement="Lane_1brmlwn" isHorizontal="true">
         <dc:Bounds x="-20" y="240" width="910" height="110" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1r0jzfb_di" bpmnElement="Lane_1r0jzfb" isHorizontal="true">
+        <dc:Bounds x="-20" y="4" width="910" height="236" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1s5z9yp_di" bpmnElement="StartEvent_1">

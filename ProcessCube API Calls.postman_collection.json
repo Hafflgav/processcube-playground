@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "e4b87d74-cd95-467b-bcfb-83710d181d78",
+		"name": "ProcessCube API Calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Start Process via Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"payload\": \"purchaseOrder\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:56000/atlas_engine/api/v1/messages/purchaseOrderMessage/trigger",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56000",
+					"path": [
+						"atlas_engine",
+						"api",
+						"v1",
+						"messages",
+						"purchaseOrderMessage",
+						"trigger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Correlate Message with Process Instance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"WMS-Status\": \"success\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:56000/atlas_engine/api/v1/messages/successMessageWMS/trigger?processInstanceId=3dc08e19-9f5d-4194-b145-2b8672ff9cf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56000",
+					"path": [
+						"atlas_engine",
+						"api",
+						"v1",
+						"messages",
+						"successMessageWMS",
+						"trigger"
+					],
+					"query": [
+						{
+							"key": "processInstanceId",
+							"value": "3dc08e19-9f5d-4194-b145-2b8672ff9cf"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "ZHVtbXlfdG9rZW4=",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
