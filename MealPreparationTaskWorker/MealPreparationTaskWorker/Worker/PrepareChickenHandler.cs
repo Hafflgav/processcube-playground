@@ -11,7 +11,10 @@ namespace MealPreparationTaskWorker.Worker
 
         public Task<ExternalTaskResult> HandleAsync(ExternalTaskPayload input, ExternalTask task, CancellationToken cancellationToken = default)
         {
-            return null; 
+            return Task.FromResult(new ExternalTaskResult
+            {
+                Result = $"Meal: {input.Var}"
+            }); 
         }
     }
 }

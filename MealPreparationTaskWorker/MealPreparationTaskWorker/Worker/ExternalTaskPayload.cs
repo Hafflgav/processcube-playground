@@ -3,6 +3,6 @@ namespace MealPreparationTaskWorker.Worker
 {
     public class ExternalTaskPayload
     {
-        public string Now { get; set; }
+        public string Var { get; set; }
     }
 }

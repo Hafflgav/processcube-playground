@@ -69,10 +69,20 @@
       <bpmn:outgoing>Flow_0wqzjmr</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:serviceTask id="Activity_0oxb2fc" name="Prepare Salad" camunda:type="external" camunda:topic="prepareSalad">
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="payload" value="{&#10;  &#34;var&#34;: &#34;Salad&#34;&#10;}" />
+        </camunda:properties>
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_094rw5f</bpmn:incoming>
       <bpmn:outgoing>Flow_1rauku9</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:serviceTask id="Activity_0vikn3x" name="Prepare Chicken" camunda:type="external" camunda:topic="prepareChicken">
+      <bpmn:extensionElements>
+        <camunda:properties>
+          <camunda:property name="payload" value="{&#10;  &#34;var&#34;: &#34;Chicken&#34;&#10;}" />
+        </camunda:properties>
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_1jynii0</bpmn:incoming>
       <bpmn:outgoing>Flow_0yimvb1</bpmn:outgoing>
     </bpmn:serviceTask>
