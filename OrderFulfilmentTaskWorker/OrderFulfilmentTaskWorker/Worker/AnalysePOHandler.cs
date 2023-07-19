@@ -3,7 +3,7 @@ using AtlasEngine;
 using AtlasEngine.ExternalTasks;
 using AtlasEngine.ExternalTasks.Requests;
 
-namespace OrderFulfillmentTaskWorker.Worker
+namespace OrderFulfilmentTaskWorker.Worker
 {
     [ExternalTaskHandler("analysePO")]
     public class AnalysePOHandler : IExternalTaskHandler<ExternalTaskPayload, ExternalTaskResult>

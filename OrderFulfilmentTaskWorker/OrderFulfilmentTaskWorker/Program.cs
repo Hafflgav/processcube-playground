@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using OrderFulfillmentTaskWorker.Worker;
+using OrderFulfilmentTaskWorker.Worker;
 
 public class Program
 {

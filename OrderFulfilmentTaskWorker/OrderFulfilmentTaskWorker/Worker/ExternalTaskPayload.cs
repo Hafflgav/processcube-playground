@@ -1,5 +1,5 @@
 ﻿using System;
-namespace OrderFulfillmentTaskWorker.Worker
+namespace OrderFulfilmentTaskWorker.Worker
 {
 
     public class ExternalTaskPayload
