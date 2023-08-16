@@ -39,7 +39,8 @@ public class Program
             .ConfigureServices((context, services) =>
             {
                 services.Configure<ApiClientSettings>(context.Configuration.GetSection("ExternalTaskWorker"));
-                services.AddScoped<AnalysePOHandler>(); 
+                services.AddScoped<AnalysePOHandler>();
+                services.AddScoped<TriggerWMSHandler>(); 
             });
     }
 }

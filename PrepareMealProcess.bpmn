@@ -10,10 +10,10 @@
         <bpmn:flowNodeRef>Gateway_1i4skie</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_0y5i1mh</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_1xbemzi</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0wpi2hj</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_17hnztc</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0oxb2fc</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0vikn3x</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Event_0wpi2hj</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:startEvent id="StartEvent_1" name="Start">
@@ -26,7 +26,8 @@
     <bpmn:sequenceFlow id="Flow_1rauku9" sourceRef="Activity_0oxb2fc" targetRef="Gateway_0y5i1mh" />
     <bpmn:sequenceFlow id="Flow_0rchi70" sourceRef="Gateway_0y5i1mh" targetRef="Activity_17hnztc" />
     <bpmn:sequenceFlow id="Flow_1jynii0" name="chicken" sourceRef="Gateway_1i4skie" targetRef="Activity_0vikn3x">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">token.current.mealChoice == "chicken"</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">token.current.mealChoice == "chicken"
+</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0yimvb1" sourceRef="Activity_0vikn3x" targetRef="Gateway_0y5i1mh" />
     <bpmn:sequenceFlow id="Flow_0wqzjmr" sourceRef="Activity_17hnztc" targetRef="Event_0wpi2hj" />
@@ -90,11 +91,11 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1cidyxu">
       <bpmndi:BPMNShape id="Participant_0px403d_di" bpmnElement="Participant_0px403d" isHorizontal="true">
-        <dc:Bounds x="5" y="90" width="965" height="260" />
+        <dc:Bounds x="5" y="90" width="965" height="380" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_1xzf0d3_di" bpmnElement="Lane_1xzf0d3" isHorizontal="true">
-        <dc:Bounds x="35" y="90" width="935" height="260" />
+        <dc:Bounds x="35" y="90" width="935" height="380" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
         <dc:Bounds x="72" y="152" width="36" height="36" />
